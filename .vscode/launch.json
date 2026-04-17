@@ -1,0 +1,61 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Debug leetcode (CMake)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/leetcode.exe",
+      "console": "internalConsole",
+      "internalConsoleOptions": "neverOpen",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:/Software/msys64/ucrt64/bin/gdb.exe",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "logging": {
+        "engineLogging": false,
+        "trace": false,
+        "traceResponse": false
+      },
+      "preLaunchTask": "CMake Build leetcode"
+    },
+    {
+      "name": "Debug cpp_demo (CMake)",
+      "type": "cppdbg",
+      "request": "launch",
+      "program": "${workspaceFolder}/build/cpp_demo.exe",
+      "console": "internalConsole",
+      "internalConsoleOptions": "neverOpen",
+      "args": [],
+      "stopAtEntry": false,
+      "cwd": "${workspaceFolder}",
+      "environment": [],
+      "externalConsole": false,
+      "MIMode": "gdb",
+      "miDebuggerPath": "C:/Software/msys64/ucrt64/bin/gdb.exe",
+      "setupCommands": [
+        {
+          "description": "Enable pretty-printing",
+          "text": "-enable-pretty-printing",
+          "ignoreFailures": true
+        }
+      ],
+      "logging": {
+        "engineLogging": false,
+        "trace": false,
+        "traceResponse": false
+      },
+      "preLaunchTask": "CMake Build cpp_demo"
+    }
+  ]
+}
