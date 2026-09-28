@@ -1,0 +1,75 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "CMake: 配置",
+      "type": "shell",
+      "command": "cmake --preset mingw-debug",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared",
+        "clear": true
+      }
+    },
+    {
+      "label": "CMake: 构建当前文件",
+      "dependsOn": ["CMake: 配置"],
+      "dependsOrder": "sequence",
+      "type": "shell",
+      "command": "cmake --build --preset debug --target ${fileBasenameNoExtension}",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "shell": {
+          "executable": "powershell.exe",
+          "args": ["-NoProfile", "-Command"]
+        }
+      },
+      "problemMatcher": ["$gcc"],
+      "presentation": {
+        "reveal": "silent",
+        "panel": "shared",
+        "clear": true
+      }
+    },
+    {
+      "label": "一键编译并运行当前文件",
+      "dependsOn": ["CMake: 构建当前文件"],
+      "dependsOrder": "sequence",
+      "type": "shell",
+      "command": "& \"${workspaceFolder}\\build\\bin\\${fileBasenameNoExtension}.exe\"",
+      "options": {
+        "cwd": "${workspaceFolder}",
+        "shell": {
+          "executable": "powershell.exe",
+          "args": ["-NoProfile", "-Command"]
+        }
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "panel": "shared",
+        "focus": true,
+        "clear": true
+      }
+    },
+    {
+      "label": "CMake: 构建全部",
+      "dependsOn": ["CMake: 配置"],
+      "dependsOrder": "sequence",
+      "type": "shell",
+      "command": "cmake --build --preset debug",
+      "options": {
+        "cwd": "${workspaceFolder}"
+      },
+      "problemMatcher": ["$gcc"]
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+# 构建产物
+build/
+out/
+cmake-build-*/
+
+# 编译生成的可执行文件
+*.exe
+*.out
+*.app
+*.dll
+*.so
+*.dylib
+
+# Code Runner 等插件生成的临时文件
+tempCodeRunnerFile*
+
+# IDE / 编辑器
+.idea/
+.cache/
+
+# 保留 VS Code 配置，但忽略其本地历史/调试日志
+.vscode/.history/
+.vscode/*.log
+
+# Python 虚拟环境
+.venv/
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# 数据文件（如为示例可保留；这里按生成/测试数据忽略）
+# data/
+
+# macOS / Windows 系统文件
+.DS_Store
+Thumbs.db
