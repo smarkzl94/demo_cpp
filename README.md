@@ -8,7 +8,7 @@
 ## 目录结构
 
 ```text
-cursor_cpp/
+demo_cpp/
 ├─ CMakeLists.txt
 ├─ README.md
 └─ src/
